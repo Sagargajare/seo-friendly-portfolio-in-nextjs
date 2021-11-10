@@ -16,7 +16,10 @@ export const Nav = styled.nav`
     width: 95%;
   }
 `
-export const NavItem = styled.div`
+interface Props {
+  isOpen: string
+}
+export const NavItem = styled.div<Props>`
   display: flex;
   align-items: center;
   font-size: 1.2rem;

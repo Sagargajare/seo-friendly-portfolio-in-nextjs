@@ -27,7 +27,10 @@ export const HeroTitle = styled.h2`
   padding: 10px 0px;
   color: #0d0c22;
 `
-export const Col = styled.div`
+interface Props {
+  width: string
+}
+export const Col = styled.div<Props>`
   width: ${(props) => (props.width ? props.width : '50%')};
   padding: 5px;
   margin: auto;
