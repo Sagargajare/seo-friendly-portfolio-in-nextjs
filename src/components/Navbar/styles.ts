@@ -17,7 +17,7 @@ export const Nav = styled.nav`
   }
 `
 interface Props {
-  isOpen: string
+  isOpen: boolean
 }
 export const NavItem = styled.div<Props>`
   display: flex;
