@@ -21,7 +21,14 @@ export default function Navbar() {
           <span />
         </S.Hamburger>
 
-        <S.NavItem isOpen={isOpen}>
+        <S.NavItem
+          onClick={() => {
+            setTimeout(() => {
+              setIsOpen(!isOpen)
+            }, 500)
+          }}
+          isOpen={isOpen}
+        >
           <S.NavLink href="#">About</S.NavLink>
           <S.NavLink href="#">Services</S.NavLink>
           <S.NavLink href="#">Pricing</S.NavLink>
