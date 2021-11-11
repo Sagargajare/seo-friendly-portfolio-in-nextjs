@@ -1,6 +1,8 @@
 import React from 'react'
 import { PrimaryButton, SecondaryButton } from 'styles/common/Button'
 import { Col, HeroInfo, HeroTitle, Row, ButtonTray, Img } from './styles'
+import Image from 'next/image'
+import heroimg from '../../assets/Hero.png'
 
 export default function index() {
   return (
@@ -18,13 +20,9 @@ export default function index() {
         </ButtonTray>
       </Col>
       <Col width={'45%'}>
-        <Img
-          width={'350px'}
-          src={
-            'https://uploads-ssl.webflow.com/5e8c566954381032f62e178b/5ea3ec8bd3a80fe62bc11cda_kristi-header-optimized.jpg'
-          }
-          alt="hero"
-        />
+        <Img>
+          <Image src={heroimg} />
+        </Img>
       </Col>
     </Row>
   )

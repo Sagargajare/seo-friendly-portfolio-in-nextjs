@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -41,12 +42,14 @@ export const ButtonTray = styled.div`
   padding: 5px;
 `
 
-export const Img = styled.img`
+export const Img = styled.div`
   display: block;
-  margin: -60px 0 20px auto;
-  padding-right: 0;
-  padding-left: 0;
+  margin: -60px auto 20px auto;
+  padding: 0 auto;
+  display: block;
+  margin-left: auto;
   cursor: default;
+  text-align: center;
   @media (max-width: 768px) {
     margin: 5px 0 5px auto;
   }

@@ -16,10 +16,8 @@ export const Nav = styled.nav`
     width: 95%;
   }
 `
-interface Props {
-  isOpen: boolean
-}
-export const NavItem = styled.div<Props>`
+
+export const NavItem = styled.div<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -28,14 +26,18 @@ export const NavItem = styled.div<Props>`
   cursor: pointer;
   list-style: none;
   @media (max-width: 768px) {
-    /* display: ${({ isOpen }) => (isOpen ? 'none' : 'flex')}; */
-    display: flex;
+    /* display: ${(props) => (props.isOpen ? 'flex' : 'none')}; */
+    display: 'flex';
     flex-direction: column;
     position: absolute;
-    top: 50%;
-    left: ${({ isOpen }) => (isOpen ? '-50%' : '50%')};
+    top: ${(props) => (props.isOpen ? '-50%' : '50%')};
+    left: ${(props) => (props.isOpen ? '-50%' : '50%')};
     transform: translate(-50%, -50%);
-    transition: left 0.3s linear;
+    background: #fff;
+    width: 100%;
+    height: fit-content;
+    border-radius: 5%;
+    transition: top 0.3s linear;
   }
 `
 export const NavLink = styled.a`

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as S from './styles'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   return (
     <header>
       <S.Nav>
