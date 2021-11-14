@@ -27,6 +27,8 @@ export const NavItem = styled.div<{ isOpen: boolean }>`
   list-style: none;
   @media (max-width: 768px) {
     /* display: ${(props) => (props.isOpen ? 'flex' : 'none')}; */
+    position: fixed;
+    z-index: 9;
     display: 'flex';
     flex-direction: column;
     position: absolute;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrimaryButton, SecondaryButton } from 'styles/common/Button'
-import { Col, HeroInfo, HeroTitle, Row, ButtonTray, Img } from './styles'
+import { HeroInfo, HeroTitle, ButtonTray, Img } from './styles'
+import { Col, Row } from 'styles/common/Layout'
 import Image from 'next/image'
 import heroimg from '../../assets/Hero.png'
 
@@ -21,7 +22,13 @@ export default function index() {
       </Col>
       <Col width={'45%'}>
         <Img>
-          <Image src={heroimg} />
+          {/* <Image src={heroimg} /> */}
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/coding-7/100/mobile-developer-2-coding-developer-programmer-coder-software-laptop-mobile-phone-app-male-512.png"
+            alt=""
+            srcSet=""
+            width="100%"
+          />
         </Img>
       </Col>
     </Row>
